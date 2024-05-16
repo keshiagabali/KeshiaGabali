@@ -15,6 +15,7 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 // Chargement des scripts 
 function enqueue_custom_scripts() {
     wp_enqueue_script('custom-header-js', get_template_directory_uri() . '/js/header.js', array('jquery'), '1.0', false);
+    wp_enqueue_script('custom-contact-js', get_template_directory_uri() . '/js/contact.js', array('jquery'), '1.0', false);
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
@@ -29,4 +30,3 @@ function register_footer_menu() {
     register_nav_menu( 'footer-menu', __( 'Footer Menu', 'text-domain' ) );
 }
 add_action( 'after_setup_theme', 'register_footer_menu' );
-
