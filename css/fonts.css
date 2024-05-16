@@ -1,0 +1,74 @@
+/* H1 */
+
+@font-face {
+    font-family: 'CormorantUpright';
+    src: url('CormorantUpright-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+h1 {
+    font-family: 'CormorantUpright';
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 142px;
+}
+
+/* H2 */
+
+@font-face {
+    font-family: 'CormorantUpright';
+    src: url('CormorantUpright-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+h2 {
+    font-family: 'CormorantUpright';
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 58px;
+}
+
+/* H3 */
+
+@font-face {
+    font-family: 'CormorantUpright';
+    src: url('CormorantUpright-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+h3 {
+    font-family: 'CormorantUpright';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+/* DESCCRIPTION */
+
+@font-face {
+    font-family: 'CormorantUpright';
+    src: url('CormorantUpright-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+.description {
+    font-family: 'CormorantUpright';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+/* P */
+
+@font-face {
+    font-family: 'CormorantUpright';
+    src: url('CormorantUpright-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+p {
+    font-family: 'CormorantUpright';
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 21px;
+}    

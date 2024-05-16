@@ -1,0 +1,33 @@
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.menu-container {
+    display: flex;
+}
+
+.menu-container ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-container ul li {
+    margin-right: 20px;
+}
+
+.menu-container ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'CormorantUpright';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.menu-container ul li a:hover{
+    font-weight: 600;
+}
