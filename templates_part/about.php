@@ -53,7 +53,7 @@
             </div>
 
             <div class="right-column-cv">
-                <p class="description">Développeuse front-end Wordpress débutante.<br>Passionnée par les nouvelles technologies, créative et autonome, ayant travaillé sur des projets variés.</p>
+                <p class="description">Développeuse Wordpress débutante.<br>Passionnée par les nouvelles technologies, créative et autonome, ayant travaillé sur des projets variés.</p>
                 
                 <h2>Experience</h2>
                 <p class="description">Assistante E-Commerce - Velvet Imperial</p>

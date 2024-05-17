@@ -1,0 +1,64 @@
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.sections-home {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.left-section-home,
+.right-section-home {
+  flex: 1;
+  padding: 20px;
+}
+
+.left-section-home img {
+  width: 100%;
+  height: auto;
+}
+
+.right-section-home h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.right-section-home .description {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.view-work-button {
+  background: transparent;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-work-button:hover {
+  background: black;
+  color: white;
+  border-color: black;
+}
