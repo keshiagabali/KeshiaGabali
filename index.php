@@ -13,7 +13,7 @@
             </div>
 
             <div class="right-section-home">
-                <h1>Hi! Je suis Keshia</h1>
+                <h1>Hi!<br>Je suis Keshia</h1>
                 <p class="description">Développeuse Wordpress. Passionnée par les nouvelles technologies, créative et autonome, ayant travaillé sur des projets variés pour divers clients.</p>
 
                 <button class="view-work-button">View Work</button>

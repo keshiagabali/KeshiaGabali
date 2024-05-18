@@ -8,16 +8,6 @@
 
 <?php get_header(); ?>
 
-<?php
-/**
- * Template Name: About Page
- *
- * Ce modèle est utilisé pour afficher une page de about.
- */
-?>
-
-<?php get_header(); ?>
-
 <section id="about" class="about-cv">
 
     <div class="container-cv">
