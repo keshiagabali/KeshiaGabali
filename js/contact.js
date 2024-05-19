@@ -21,7 +21,5 @@ document.addEventListener('DOMContentLoaded', function () {
     if (title) {
         title.classList.add('hidden');
         observer.observe(title);
-    } else {
-        console.error('Element .contact-form-title h2 not found.');
-    }
+    } 
 });

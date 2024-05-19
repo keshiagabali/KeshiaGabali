@@ -46,6 +46,7 @@
 
 .container-description h2 {
     color: #fff;
+    text-align: center;
 }
 
 .icon-github-section {
@@ -143,4 +144,45 @@
 
 .lazy.fade-in {
     opacity: 1;
+}
+
+/* Media Queries pour Tablettes */
+@media (max-width: 1024px) {
+    .hero-image {
+        height: 70vh;
+        background-attachment: scroll;
+    }
+    .icon-github {
+        font-size: 80px;
+        padding: 60px;
+    }
+    .desktop-image, .mobile-image {
+        max-width: 50%;
+    }
+}
+
+/* Media Queries pour Mobiles */
+@media (max-width: 768px) {
+    .hero-image {
+        height: 30vh;
+        background-attachment: scroll; /* Désactiver l'effet de parallaxe sur les mobiles */
+    }
+    .icon-github {
+        font-size: 60px;
+        padding: 40px;
+    }
+    .desktop-image, .mobile-image {
+        max-width: 70%;
+    }
+    .next-project-link {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .menu-burger {
+        width: 20px;
+        height: 15px;
+    }
+    .menu-burger span {
+        height: 2px;
+    }
 }
