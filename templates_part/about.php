@@ -19,7 +19,7 @@
 
         <div class="content-cv">
 
-            <div class="left-column-cv">
+        <div class="left-column-cv">
                 <h2>Contact</h2>
                 <p class="description">Email: keshia.dev@yahoo.com</p>
                 <p class="description">Paris, France</p>
@@ -30,16 +30,54 @@
                 <p class="description">BTS Management Commercial Opérationnel - CNED</p>
                 
                 <h2>Skills</h2>
-                <ul class="description">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>PHP</li>
-                    <li>WordPress</li>
-                    <li>Responsive</li>
-                    <li>Git</li>
-                    <li>MySQL</li>
-                </ul>
+                <div class="skill">
+                    <p>HTML</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-skill-level="90%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>CSS</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-skill-level="85%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>JavaScript</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-skill-level="70%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>PHP</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-skill-level="80%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>WordPress</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-skill-level="75%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>Responsive</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-skill-level="65%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>Git</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-skill-level="60%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>MySQL</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-skill-level="70%"></div>
+                    </div>
+                </div>
             </div>
 
             <div class="right-column-cv">

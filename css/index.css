@@ -16,6 +16,10 @@
   padding: 20px;
 }
 
+.content-index p {
+  color: #FFFFFF;
+}
+
 .animated-title {
   margin-bottom: 20px;
   animation: fadeInDown 1s ease-out;

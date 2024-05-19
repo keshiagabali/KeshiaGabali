@@ -6,6 +6,7 @@ if (have_posts()) :
         $description = get_field('description');
         $imgmobile = get_field('imgmobile');
         $imgdesktop = get_field('imgdesktop');
+        $github = get_field('github');
         $next_post = get_next_post();
 
         if (empty($next_post)) {
@@ -29,29 +30,31 @@ if (have_posts()) :
         
         <section class="description-section">
             <div class="container-description">
-                <div class="description">
+                <h2>
                     <?php echo $description; ?>
-                </div>
+                </h2>
             </div>
         </section>
 
         <section class="desktop-image-section">
             <?php if ($imgdesktop) : ?>
-                <img src="<?php echo esc_url($imgdesktop['url']); ?>" alt="<?php echo esc_attr($imgdesktop['alt']); ?>" class="desktop-image">
+                <img src="<?php echo esc_url($imgdesktop['url']); ?>" data-src="<?php echo esc_url($imgdesktop['url']); ?>" alt="<?php echo esc_attr($imgdesktop['alt']); ?>" class="desktop-image lazy">            
             <?php endif; ?>
         </section>
 
-        <section class="github-section">
+        <section class="icon-github-section">
             <div class="container-github">
-                <div class="icon-github">
-                    <?php echo $description; ?>
-                </div>
+                <?php if ($github) : ?>
+                    <a href="<?php echo esc_url($github); ?>" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github icon-github"></i>
+                    </a>
+                <?php endif; ?>
             </div>
         </section>
 
         <section class="mobile-image-section">
             <?php if ($imgmobile) : ?>
-                <img src="<?php echo esc_url($imgmobile['url']); ?>" alt="<?php echo esc_attr($imgmobile['alt']); ?>" class="mobile-image">
+                <img src="<?php echo esc_url($imgmobile['url']); ?>" data-src="<?php echo esc_url($imgmobile['url']); ?>" alt="<?php echo esc_attr($imgmobile['alt']); ?>" class="mobile-image lazy">
             <?php endif; ?>
         </section>
 
@@ -70,3 +73,5 @@ if (have_posts()) :
     <?php endwhile;
 endif;
 ?>
+
+<?php get_footer(); ?>

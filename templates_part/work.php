@@ -34,7 +34,7 @@
                     <div class="project">
                         <?php if (has_post_thumbnail()) : ?>
                             <div class="project-thumbnail">
-                                <?php the_post_thumbnail(); ?>
+                                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
                             </div>
                         <?php endif; ?>
                         <a class="project-title" href="<?php the_permalink(); ?>">

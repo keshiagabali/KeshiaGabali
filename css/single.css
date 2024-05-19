@@ -4,56 +4,143 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.description-section {
-    background-color: #FAF9F8;
-    padding: 90px 20px;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.github-section {
-    background-color: #FAF9F8;
-    padding: 90px 20px;
+.description-single {
+    color: white;
+    animation: slideInFromLeft 1s ease-in-out;
 }
 
-.container-next-project {
-    max-width: 1200px;
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.description-section, .next-project-section {
+    padding: 60px 20px;
+}
+
+.container-description, .container-next-project {
+    max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+}
+
+.container-description h2 {
+    color: #fff;
+}
+
+.icon-github-section {
+    text-align: center;
+    padding: 90px;
+    transition: transform 0.3s ease;
+}
+
+.icon-github {
+    font-size: 100px;
+    margin-bottom: 20px;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-github:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.github-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.github-link:hover {
+    transform: scale(1.1);
 }
 
 .desktop-image-section, .mobile-image-section {
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
+    background-color: #F4F4F4;
+    transition: background-color 0.3s ease;
 }
 
 .desktop-image {
-    max-width: 50%;
+    max-width: 40%;
     height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .mobile-image {
-    max-width: 30%;
+    max-width: 25%;
     height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.desktop-image:hover, .mobile-image:hover {
+    transform: scale(1.05);
 }
 
 .next-project-section {
     background-color: #E8E3DF;
-    padding: 40px 20px;
     text-align: center;
 }
 
 .next-project-link {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
+    padding: 15px 30px;
+    background-color: transparent;
     color: #fff;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 30px;
     font-size: 18px;
     text-transform: uppercase;
+    border: solid 2px #fff;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .next-project-link:hover {
-    background-color: #555;
+    background-color: white;
+    color: #011832;
+    transform: scale(1.1);
+}
+
+.description-section, .desktop-image-section, .icon-github-section, .mobile-image-section, .next-project-section {
+    background-color: #011832;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.lazy {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.lazy.fade-in {
+    opacity: 1;
 }

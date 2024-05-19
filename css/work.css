@@ -1,12 +1,31 @@
 #work {
-    background: linear-gradient(to bottom, #FAF9F8 50%, #E8E3DF 50%);
-    padding: 20px;
+    background-color: #011832;
+    padding: 40px 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .container-projet {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
+}
+
+.container-projet h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #011832;
 }
 
 .projects-grid {
@@ -18,8 +37,16 @@
 .project {
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .project-thumbnail img {
@@ -31,19 +58,25 @@
 .project-title {
     display: block;
     background: transparent;
-    border: 2px solid black;
+    border: 2px solid #011832;
     border-radius: 25px;
     padding: 10px 20px;
-    color: black;
+    color: #011832;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 25px;
     margin-bottom: 25px;
     text-decoration: none;
 }
-  
+
 .project-title:hover {
-    background: black;
+    background: #011832;
     color: white;
-    border-color: black;
+}
+
+.description {
+    margin: 20px 0;
+    color: black;
+    font-size: 1em;
+    line-height: 1.5;
 }

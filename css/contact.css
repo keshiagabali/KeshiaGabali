@@ -1,35 +1,59 @@
 #contact {
   position: relative;
   overflow: hidden;
-  width: 100vw;   
+  width: 100vw;
   height: 100vh;
-  display: flex; 
-  align-items: center; 
-  background: linear-gradient(to right, #FAF9F8, #E8E3DF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #011832;  
+  animation: backgroundAnimation 15s ease infinite;
+}
+
+@keyframes backgroundAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .contact-form {
-  flex: 1; 
-  height: 100%; 
+  flex: 1;
+  height: 100%;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-form {
-  padding: 20px; 
+  padding: 20px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .contact-form-tittle h2 {
   margin-top: 0;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
+  animation: slideIn 1s ease forwards;
+  color: white;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .form label {
-  display: block; 
-  margin-bottom: 10px; 
+  display: block;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
 }
 
 .form-row {
@@ -54,6 +78,12 @@ input[type="text"], input[type="email"], textarea {
   border: 2px solid black;
   border-radius: 8px;
   box-sizing: border-box;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+  border-color: #007BFF;
+  background-color: #f0f8ff;
 }
 
 input[type="submit"] {
@@ -61,8 +91,8 @@ input[type="submit"] {
   width: auto;
   padding: 10px 20px;
   margin: 10px auto;
-  background: black;
-  color: white;
+  background: white;
+  color: #011832;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -70,14 +100,31 @@ input[type="submit"] {
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background: white;
-    color: black;
-}  
+  background: #011832;
+  color: white;
+}
 
-::placeholder { 
+::placeholder {
   color: black;
   opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
 }
