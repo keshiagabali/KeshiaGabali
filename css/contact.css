@@ -31,7 +31,7 @@
   animation: fadeIn 2s ease-in-out;
 }
 
-.contact-form-tittle h2 {
+.contact-form-title h2 {
   margin-top: 0;
   margin-bottom: 20px;
   animation: slideIn 1s ease forwards;
@@ -111,6 +111,12 @@ input[type="submit"]:hover {
 ::placeholder {
   color: black;
   opacity: 1;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+	border-color: white;
+	color: white;
+	text-align: center;
 }
 
 @keyframes fadeIn {

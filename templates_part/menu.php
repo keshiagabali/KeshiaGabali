@@ -1,4 +1,5 @@
-<nav class="menu">
+<!-- menu -->
+<nav class="menu menu-overlay">
 
     <div class="menu-container">
 

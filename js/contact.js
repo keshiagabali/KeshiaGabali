@@ -16,7 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(label);
     });
 
-    const title = document.querySelector('.contact-form-tittle h2');
-    title.classList.add('hidden');
-    observer.observe(title);
+    const title = document.querySelector('.contact-form-title h2');
+    
+    if (title) {
+        title.classList.add('hidden');
+        observer.observe(title);
+    } else {
+        console.error('Element .contact-form-title h2 not found.');
+    }
 });

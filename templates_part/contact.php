@@ -10,7 +10,7 @@
 
 <section id="contact" class="contact">
     <div class="contact-form">
-        <div class="contact-form-tittle">
+        <div class="contact-form-title">
             <h2>Say Hello !</h2>
         </div>
         <div class="form">

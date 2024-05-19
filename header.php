@@ -27,6 +27,13 @@
 
             <div class="header-right">
 
+                <!-- menu burger button -->
+                <div class="menu-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
                 <!-- menu -->
                 <?php include ('templates_part/menu.php'); ?>
 
