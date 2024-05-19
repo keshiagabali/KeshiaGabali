@@ -1,9 +1,12 @@
+/* Page Work */
+
 #work {
     background-color: #011832;
     padding: 40px 20px;
     animation: fadeIn 1.5s ease-in-out;
 }
 
+/* Animation d'apparition */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -15,6 +18,7 @@
     }
 }
 
+/* Conteneur principal des projets */
 .container-projet {
     max-width: 1200px;
     margin: 0 auto;

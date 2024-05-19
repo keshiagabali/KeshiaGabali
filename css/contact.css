@@ -1,3 +1,5 @@
+/* Page Contact */
+
 #contact {
   position: relative;
   overflow: hidden;
@@ -10,12 +12,14 @@
   animation: backgroundAnimation 15s ease infinite;
 }
 
+/* Animation du Background */
 @keyframes backgroundAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
+/* Formulaire de contact */
 .contact-form {
   flex: 1;
   height: 100%;
@@ -36,17 +40,6 @@
   margin-bottom: 20px;
   animation: slideIn 1s ease forwards;
   color: white;
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .form label {
@@ -81,6 +74,7 @@ input[type="text"], input[type="email"], textarea {
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
+/* Focus sur les champs de saisie et la zone de texte */
 input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   border-color: #007BFF;
   background-color: #f0f8ff;
@@ -119,6 +113,19 @@ input[type="submit"]:hover {
 	text-align: center;
 }
 
+/* Animation de glissement */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation d'apparition */
 @keyframes fadeIn {
   from {
     opacity: 0;

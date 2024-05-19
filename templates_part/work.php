@@ -9,26 +9,24 @@
 <?php get_header(); ?>
 
 <section id="work" class="work">
-
     <div class="container-projet">
-
         <h1>Portfolio</h1>
-
         <div class="projects-grid">
             <?php
             // La boucle pour récupérer les projets
             $args = array(
-                'post_type' => 'projet',
-                'posts_per_page' => -1
+                'post_type' => 'projet', // Type de contenu personnalisé 'projet'
+                'posts_per_page' => -1 // Récupère tous les projets
             );
             $projets = new WP_Query($args);
 
             if ($projets->have_posts()) :
                 while ($projets->have_posts()) : $projets->the_post();
-                    $description = get_field('description');
-                    $imgmobile = get_field('imgmobile');
-                    $imgdesktop = get_field('imgdesktop');
-                    $github = get_field('github');
+                    // Récupération des champs personnalisés
+                    $description = get_field('description'); // Champ personnalisé 'description'
+                    $imgmobile = get_field('imgmobile'); // Champ personnalisé 'imgmobile'
+                    $imgdesktop = get_field('imgdesktop'); // Champ personnalisé 'imgdesktop'
+                    $github = get_field('github'); // Champ personnalisé 'github'
                     ?>
 
                     <div class="project">
@@ -38,24 +36,22 @@
                             </div>
                         <?php endif; ?>
                         <a class="project-title" href="<?php the_permalink(); ?>">
-                            <?php the_title(); ?>
+                            <?php the_title(); // Titre du projet ?>
                         </a>
                         <div class="description">
-                            <?php echo $description; ?>
+                            <?php echo $description; // Description du projet ?>
                         </div>
                     </div>
 
                 <?php
                 endwhile;
-                wp_reset_postdata();
+                wp_reset_postdata(); // Réinitialise les données de la requête
             else :
-                echo '<p>No projects found</p>';
+                echo '<p>No projects found</p>'; // Message si aucun projet n'est trouvé
             endif;
             ?>
         </div>
-
     </div>
-
 </section>
 
 <?php get_footer(); ?>

@@ -32,10 +32,12 @@
     z-index: 999;
 }
 
+/* Overlay du menu ouvert */
 .menu-overlay.open {
     transform: translateY(0);
 }
 
+/* Conteneur du menu */
 .menu-container {
     text-align: center;
 }
@@ -50,6 +52,7 @@
     gap: 90px;
 }
 
+/* Éléments de la liste du menu */
 .menu-container ul li {
     margin: 20px 0;
 }
