@@ -1,6 +1,8 @@
-/* Page Single */
+@import 'variables';
 
-/* Image Hero */
+// Page Single
+
+// Image Hero
 .hero-image {
     width: 100%;
     height: 90vh;
@@ -10,25 +12,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: $bg-white;
     text-align: center;
     position: relative;
     overflow: hidden;
     animation: fadeIn 2s ease-in-out;
 }
 
-/* Animation d'apparition */
+// Animation d'apparition
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
 .description-single {
-    color: white;
+    color: $bg-white;
     animation: slideInFromLeft 1s ease-in-out;
 }
 
-/* Animation de glissement depuis la gauche */
+// Animation de glissement depuis la gauche
 @keyframes slideInFromLeft {
     from {
         transform: translateX(-100%);
@@ -50,36 +52,36 @@
 }
 
 .container-description h2 {
-    color: #fff;
+    color: $bg-white;
     text-align: center;
 }
 
-/* Section icône GitHub */
+// Section icône GitHub
 .icon-github-section {
     text-align: center;
     padding: 90px;
     transition: transform 0.3s ease;
-}
 
-.icon-github {
-    font-size: 100px;
-    margin-bottom: 20px;
-    color: white;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
+    .icon-github {
+        font-size: 100px;
+        margin-bottom: 20px;
+        color: $bg-white;
+        transition: color 0.3s ease, transform 0.3s ease;
 
-.icon-github:hover {
-    color: white;
-    transform: scale(1.1);
-}
+        &:hover {
+            color: $bg-white;
+            transform: scale(1.1);
+        }
+    }
 
-.github-link {
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
+    .github-link {
+        display: inline-block;
+        transition: transform 0.3s ease;
 
-.github-link:hover {
-    transform: scale(1.1);
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
 }
 
 .desktop-image-section, .mobile-image-section {
@@ -87,76 +89,73 @@
     padding: 40px 20px;
     background-color: #F4F4F4;
     transition: background-color 0.3s ease;
+
+    .desktop-image {
+        max-width: 40%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px $box-shadow-color;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .mobile-image {
+        max-width: 25%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px $box-shadow-color;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
 }
 
-/* Image desktop */
-.desktop-image {
-    max-width: 40%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-/* Image mobile */
-.mobile-image {
-    max-width: 25%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.desktop-image:hover, .mobile-image:hover {
-    transform: scale(1.05);
-}
-
-/* Section du projet suivant */
+// Section du projet suivant
 .next-project-section {
     background-color: #E8E3DF;
     text-align: center;
-}
 
-.next-project-link {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: transparent;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 18px;
-    text-transform: uppercase;
-    border: solid 2px #fff;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
+    .next-project-link {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: transparent;
+        color: $bg-white;
+        text-decoration: none;
+        border-radius: 30px;
+        font-size: 18px;
+        text-transform: uppercase;
+        border: solid 2px $bg-white;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 
-.next-project-link:hover {
-    background-color: white;
-    color: #011832;
-    transform: scale(1.1);
+        &:hover {
+            background-color: $bg-white;
+            color: $primary-color;
+            transform: scale(1.1);
+        }
+    }
 }
 
 .description-section, .desktop-image-section, .icon-github-section, .mobile-image-section, .next-project-section {
-    background-color: #011832;
+    background-color: $primary-color;
     animation: fadeIn 2s ease-in-out;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* Classe lazy pour le chargement différé */
+// Classe lazy pour le chargement différé
 .lazy {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+
+    &.fade-in {
+        opacity: 1;
+    }
 }
 
-.lazy.fade-in {
-    opacity: 1;
-}
-
-/* Media Queries pour Tablettes */
+// Media Queries pour Tablettes
 @media (max-width: 1024px) {
     .hero-image {
         height: 70vh;
@@ -171,11 +170,11 @@
     }
 }
 
-/* Media Queries pour Mobiles */
+// Media Queries pour Mobiles
 @media (max-width: 768px) {
     .hero-image {
         height: 30vh;
-        background-attachment: scroll; /* Désactiver l'effet de parallaxe sur les mobiles */
+        background-attachment: scroll; // Désactiver l'effet de parallaxe sur les mobiles
     }
     .icon-github {
         font-size: 60px;
@@ -191,8 +190,9 @@
     .menu-burger {
         width: 20px;
         height: 15px;
-    }
-    .menu-burger span {
-        height: 2px;
+
+        span {
+            height: 2px;
+        }
     }
 }

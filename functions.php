@@ -3,16 +3,7 @@
 // Chargement des feuilles de style 
 function enqueue_custom_styles() {
     // Feuilles de style personnalisées
-    wp_enqueue_style('custom-theme-css', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
-    wp_enqueue_style('custom-header-css', get_template_directory_uri() . '/css/header.css', array(), '1.0', 'all');
-    wp_enqueue_style('custom-menu-css', get_template_directory_uri() . '/css/menu.css', array(), '1.0', 'all');
-    wp_enqueue_style('custom-footer-css', get_template_directory_uri() . '/css/footer.css', array(), '1.0', 'all');
-    wp_enqueue_style('custom-contact-css', get_template_directory_uri() . '/css/contact.css', array(), '1.0', 'all');
-    wp_enqueue_style('custom-about-css', get_template_directory_uri() . '/css/about.css', array(), '1.0', 'all');
-    wp_enqueue_style('custom-home-css', get_template_directory_uri() . '/css/index.css', array(), '1.0', 'all');
-    wp_enqueue_style('custom-work-css', get_template_directory_uri() . '/css/work.css', array(), '1.0', 'all');
-    wp_enqueue_style('custom-single-css', get_template_directory_uri() . '/css/single.css', array(), '1.0', 'all');
-    wp_enqueue_style('custom-fonts-css', get_template_directory_uri() . '/css/fonts.css', array(), '1.0', 'all');
+    wp_enqueue_style('custom-main-css', get_template_directory_uri() . '/css/main.css', array(), '1.0', 'all');
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 

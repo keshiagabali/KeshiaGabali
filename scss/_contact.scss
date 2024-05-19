@@ -1,0 +1,140 @@
+@import 'variables';
+
+// Page Contact
+
+#contact {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-color;  
+  animation: backgroundAnimation 15s ease infinite;
+}
+
+// Animation du Background
+@keyframes backgroundAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+// Formulaire de contact
+.contact-form {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  animation: fadeIn 2s ease-in-out;
+
+  .contact-form-title h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease forwards;
+    color: $bg-white;
+  }
+
+  .form label {
+    display: block;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+
+    label {
+      flex: 1;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    background: $bg-white;
+    border: 2px solid $text-color;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+
+    &:focus {
+      border-color: #007BFF;
+      background-color: #f0f8ff;
+    }
+  }
+
+  input[type="submit"] {
+    display: block;
+    width: auto;
+    padding: 10px 20px;
+    margin: 10px auto;
+    background: $bg-white;
+    color: $primary-color;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'CormorantUpright';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background: $primary-color;
+      color: $bg-white;
+    }
+  }
+
+  ::placeholder {
+    color: $text-color;
+    opacity: 1;
+  }
+
+  .wpcf7 form.sent .wpcf7-response-output {
+    border-color: $bg-white;
+    color: $bg-white;
+    text-align: center;
+  }
+}
+
+// Animation de glissement
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Animation d'apparition
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
